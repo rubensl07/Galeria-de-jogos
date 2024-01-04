@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    color: white;
+
+}
+body{
+    background-color: black;
+}
+.jogo{
+    
+    margin: 1%;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 80%;
+    background-size: cover;
+    border-radius: 32px;
+}
+.container{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* padding: 322px; */
+    padding: 5%;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    opacity: 0;
+}
+.content h2{
+    font-size: 300%;
+}
+
+.hover:hover{
+    transition: 2s;
+    opacity: 1;
+}
