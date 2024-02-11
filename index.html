@@ -1,14 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="shotcut icon" href="./content/simple-game-controller-drawing-y6evxkt5pl2a0jty.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./content/Dudu_Calligraphy.ttf">
+    <link rel="stylesheet" href="./games.css">
+    <script src="./app.js" defer></script>
     <title>Games</title>
 </head>
 <body>
-    <main>
-        <button>Exibir jogos</button>
-    </main>
+    <div class="painelRegistro" id="painelRegistro">
+        <img src="./content/xbutton.png" class="closeButton" id="botaoFecharPainel">
+        <h1>Registrar novo jogo</h1>
+        <div class="inputbox">
+            <input type="text" id="titulo" required>
+            <label for="titulo">Título</label>
+        </div>
+        <div class="inputbox">
+            <input type="text" id="genero" required>
+            <label for="genero">Gênero</label>
+        </div>
+
+
+        <div class = 'uploadContainer' id="uploadContainer">
+            <input type="file" id="fundoInput">
+            <label for="fundoInput" accept="image/*" class="uploadFundo" >
+                <img src="./content/upload.png">
+                Fundo
+            </label>
+        </div>
+        <div class="fontChoose">
+            <label for="font-select">Escolha uma fonte:</label>
+            <select name="fontes" id="font-select">
+              <option value=0 class="arial">Arial</option>
+              <option value=1 class="courier">Courier</option>
+              <option value=2 class="franklin">Franklin</option>
+              <option value=3 class="trebuchet">Trebuchet</option>
+              <option value=4 class="fantasy">Fantasy</option>
+              <option value=5 class="cursive">Cursive</option>
+              <option value=6 class="cedarville">Cedarville</option>
+              <option value=7 class="dudu">Dudu Calligraphy</option>
+            </select>
+        </div>
+
+        <button class="registrarJogoBotao" id="concluirRegistro">
+            Adicionar jogo
+        </button>
+    </div>
+    <div class="contContainer">
+        <div class="container" id="container"></div>
+        <button onclick="abrirPainel()" class="registrarJogoBotao" id="registrarJogo">Registrar</button>
+    </div>
 </body>
 </html>
